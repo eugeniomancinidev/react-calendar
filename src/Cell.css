@@ -1,0 +1,76 @@
+.grid-header{
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    min-width: calc((100% / 7) - 32px);
+    border: 1px solid #fff;
+    padding: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    background: #5A7D9A;
+    color: white;
+    letter-spacing: 0.12em;
+    border-radius: 8px;
+    height: 55px;
+}
+
+.cell{
+    position: relative;
+    display: flex;
+    margin: 0;
+    min-width: calc((100% / 7) - 32px);
+    border: 1px solid #fff;
+    height: 90px;
+    padding: 15px;
+    background: #f4f4f4;
+    border-radius: 6px;
+}
+
+.cell.today {
+  border: 2px solid #5A7D9A;
+  background: #f0f5f9;
+}
+
+.cell.today span {
+    /*background: white;
+    color: #5a7d9a;*/
+    color: #FFF;
+    font-weight: bold;
+}
+
+.cell span{
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #5A7D9A;
+    color: white;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cell span:first-child {
+    font-size: 0.85rem;
+  /*background: #777;*/
+}
+
+.cell:hover {
+    background: #e9f0f6;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+.cell.empty {
+  background: transparent;
+  pointer-events: none;
+}
+
+.cell.empty span{
+    display: none;
+}
